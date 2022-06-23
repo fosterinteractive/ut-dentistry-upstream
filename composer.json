@@ -122,7 +122,7 @@
         "preferred-install": "dist",
         "sort-packages": false,
         "platform": {
-            "php": "7.4"
+            "php": "7.3"
         },
         "allow-plugins": {
             "composer/installers": true,
