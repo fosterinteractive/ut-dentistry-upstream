@@ -1,0 +1,5 @@
+api_version: 1
+web_docroot: true
+protected_web_paths:
+  - /install.php
+build_step: true

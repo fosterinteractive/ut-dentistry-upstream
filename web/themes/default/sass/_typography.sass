@@ -1,0 +1,97 @@
+body
+  font-family: $sans-serif
+  color: $blue
+  
+header
+  a
+    text-transform: uppercase
+    
+    
+.paragraph--type--page-title
+  font-size: 200%
+  +centeredText
+  margin: 0 auto .5em
+  padding: 0.6em 0.35em 0.45em
+  font-family: $sans-serif
+  background: $lightBlue
+  color: white
+  letter-spacing: .5px
+  text-transform: uppercase
+  text-shadow: 1px -1px 2px rgba(0, 0, 0, 0.4)
+  box-shadow: inset 0 6px 13px 1px rgba(0, 0, 0, 0.2)
+    
+ 
+.field--type-text-long
+  p, ul, ol, h1, h2, h3, h4
+    +centeredText
+  h1
+    font-size: 2.25em
+  h2
+    font-size: 2em
+  h3
+    font-size: 1.75em
+  h4
+    font-size: 1.5em
+  ul, ol
+    padding-left: 1em
+  .serif
+    font-family: $serif
+  .sans-serif
+    font-family: $sans-serif    
+  .three-col
+    +columns(3 1em)
+  .two-col
+    +columns(2 1em)        
+  .pullquote.marks
+    &::before
+      content: "\201C"
+    &::after
+      content: "\201D"
+  .pullquote
+    font-size: 275%
+    max-width: 420px
+    display: inline-block
+    margin: -.1em .85em 0.1em -2em
+    float: left
+    text-align: right
+    @media all and (max-width: 1255px)
+      margin-left: -1em  
+    @media all and (max-width: 1170px)   
+      margin-left: 0
+      width: 100%
+    @media all and (max-width: 650px)   
+      max-width: 100%
+      margin: 0.35em 0 0.35em
+  .three-col, .two-col
+    .pullquote
+      margin: 0.5em 0 .51em
+  @media all and (max-width: 750px)
+    .three-col
+      +columns(2) 
+  @media all and (max-width: 500px)  
+    .three-col, .two-col
+      +columns(1)     
+  .serif-large
+    font-size: 250%
+    line-height: 1
+    margin: -.34em 0.1em -0.15em 0
+  .serif-dropcap
+    font-size: 266%
+    float: left
+    line-height: 1
+    margin: 0.06em 0.15em -.2em 0
+  .sansserif-large
+    font-size: 270%
+    float: left
+    line-height: 1
+    margin: -.45em 0.2em 0 0
+  .sansserif-dropcap
+    font-size: 266%
+    float: left
+    line-height: 1
+    margin: -0.46em 0.01em -.1em 0
+      
+      
+@media all and (max-width: 1050px)
+  .field--name-field-page-title
+    margin: 1em 1rem .5em    

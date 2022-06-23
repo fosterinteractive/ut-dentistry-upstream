@@ -1,0 +1,11 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+
+
+default-js:
+  verion: 1.x
+  js:
+    js/default.js: {}
+

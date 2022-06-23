@@ -1,0 +1,11 @@
+name: Seven Custom Admin Theme
+type: theme
+description: This is a fluffy sub theme of admininmal
+core: 8.x
+# Defines the base theme
+base theme: seven
+# Defines libraries group in which we can add css/js.
+libraries:
+   - seven_custom/global-styling
+   - seven_custom/seven_custom-js
+ 

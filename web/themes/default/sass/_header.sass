@@ -1,0 +1,214 @@
+header
+  +clearfix
+  background: white
+  //max-width: 1610px
+    margin: 0 auto    
+  //ul
+    list-style-type: none
+
+.site-name
+  display: none
+
+.menu-item
+  padding: 0
+ul.menu
+  margin: 0
+  
+#block-uoftmenu  
+  background: $grey
+  overflow: hidden
+  font-size: 90%
+  color: white
+  padding: 0 2.25em 1em
+  li
+    float: left
+    padding: 1em 0 0
+    display: inline-block    
+  a
+    font-family: $serif
+    text-transform: none
+    color: white
+  a:hover
+    text-decoration: underline
+  li::after
+    content: "/"
+    padding: 0 1em
+  //li:last-of-type
+    &::after
+      content: none
+    a
+      border: 1px solid white
+      padding: .25em 90% .25em .25em
+    a:hover
+      text-decoration: none
+  
+#block-default-branding
+  float: left
+  width: 36% 
+  background-color: $blue
+  height: 115px
+  position: relative
+  min-width: 300px
+  z-index: 1
+  img
+    margin: 25px 35px
+    min-width: 100px
+    position: absolute
+    z-index: 6
+  &::after
+    content: ''
+    height: 115px
+    width: 102px
+    background-color: $blue
+    position: absolute
+    top: 0
+    right: 0
+    left: auto
+    transform: skewX(40deg)
+    transform-origin: top
+    -webkit-transform: skewX(40deg)
+    -webkit-transform-origin: 0 0
+
+#block-secondarymenu
+  overflow: hidden
+  float: right
+  width: 63%  
+  ul
+    margin-left: 24px
+  li
+    background: $blue
+    float: left
+    margin: 9px 8px 0 8px
+    width: 202px
+    max-height: 61px
+    transform: skew(40deg)    
+  li:last-child
+    margin-right: 0 !important
+  a
+    display: inline-block
+    transform: skewX(-40deg)
+    padding: 38px 34px 8px 32px
+    color: white 
+    font-size: 96%      
+  a.is-active
+    color: white    
+  li:first-child
+    background: $yellow
+  li:nth-child(2)
+    background: $green
+  li:nth-child(3)
+    background: $lightBlue
+  li:nth-child(4)
+    background: $teal
+  li:hover
+    background: $greyBlue
+    & a
+      color: $blue
+    
+#block-default-main-menu
+  float: right
+  overflow: hidden
+  margin-top: 11px
+  ul
+    overflow: hidden
+  li
+    float: left
+    overflow: hidden
+  a
+    display: inline-block
+    color: $blue
+    padding: 12px 22px 2px
+    margin: 0 6px
+    font-size: 130%      
+  a.is-active
+    color: white
+    background: $blue
+  a:hover
+    color: $blue
+    background: $greyBlue
+  li:last-of-type
+    a
+      margin-right: 0
+
+         
+@media all and (max-width: 1460px)
+  header
+    background: $blue
+  #block-default-branding
+    width: 30%
+    height: 100px
+    &:after
+      content: none  
+  #block-secondarymenu
+    width: 70%
+    margin-top: 30px
+    li
+      width: 160px
+      margin: 1%
+      padding: 0
+      transform: none
+      text-align: center
+    a
+      transform: none
+      padding: 1em 0 .8em
+      font-size: 90%
+  #block-default-main-menu
+    width: 100%   
+    background: white
+    clear: both
+    a
+      padding: 0.75em 2em .5em
+      margin: 0
+      
+@media all and (max-width: 1040px)        
+  #block-default-branding
+    img
+      display: block
+      position: static
+  #block-secondarymenu
+    max-width: 470px
+    li
+      width: 96px
+      height: 40px
+      vertical-align: middle
+      display: table
+    a
+      padding: 0.55em .25em 0.4em
+      display: table-cell
+      vertical-align: middle      
+  #block-default-main-menu a
+    padding: 0.6em 1em 0.45em
+    height: 1.85em
+      
+@media all and (max-width: 780px) 
+  #block-default-branding
+    width: 100%  
+    img
+      margin: 1.5em auto  
+  #block-secondarymenu
+    width: 100%  
+    margin: 1.5em auto 0
+    float: none
+  #block-uoftmenu li::after
+    padding: 0 .5em
+  #block-uoftmenu li:last-of-type a    
+    padding-right: 3em
+    
+@media all and (max-width: 495px) 
+  #block-uoftmenu    
+    padding: .5em .75em 0 
+    li
+      padding: 0 0 .5em   
+    //li:last-of-type a    
+      padding: 0 2em 0 .25em
+  #block-default-main-menu
+    margin-top: .5%
+    a
+      padding: 0.6em .5em 0.45em     
+  #block-secondarymenu
+    ul
+      margin: 0
+    li
+      width: 49%
+      margin: 2px
+  

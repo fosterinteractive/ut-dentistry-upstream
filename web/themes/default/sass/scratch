@@ -1,0 +1,10 @@
+@media all and (max-width: 1050px)
+  .field--name-field-page-title
+    margin: 1em 1rem .5em
+  //main
+    p, ul, ol, h2, h3, h4
+      padding-right: .5rem      
+      padding-left: .5rem
+        
+        
+        

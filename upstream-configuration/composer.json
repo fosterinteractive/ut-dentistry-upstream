@@ -1,6 +1,7 @@
 {
     "name": "pantheon-upstreams/upstream-configuration",
     "type": "project",
+    "version": "1.0.0",
     "repositories": [
         {
             "type": "composer",
@@ -8,8 +9,17 @@
         }
     ],
     "require": {
-    },
-    "extra": {
-        "_README": "To make a custom upstream, clone this repository and add any dependencies to be provided by this upstream to this composer.json file. Leave the root-level composer.json file for the exclusive use of each individual site; do not modify it after your custom upstream has been published. See https://pantheon.io/docs/create-custom-upstream for more information."
+        "php": ">=7.0.8",
+        "composer/installers": "^1.0.20",
+        "drupal/core-composer-scaffold": "^8.8.1",
+        "drupal/core-recommended": "^8.8",
+        "pantheon-systems/drupal-integrations": "^8",
+        "drush/drush": "~8.3",
+        "drupal/console": "^1",
+        "cweagans/composer-patches": "^1.0",
+        "drupal/config_direct_save": "^1.0",
+        "drupal/config_installer": "^1.0",
+        "rvtraveller/qs-composer-installer": "^1.1",
+        "zaporylie/composer-drupal-optimizations": "^1.0"
     }
 }

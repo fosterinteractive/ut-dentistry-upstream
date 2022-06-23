@@ -1,0 +1,41 @@
+#block-footer
+  background-image: url(images/footer.jpg)
+  background-size: cover
+  padding: 3em
+  color: white
+  text-align: center
+  line-height: 1.5
+  p:first-of-type
+    font-size: 166%
+  hr
+    max-width: 66%
+  @media all and (max-width: 550px)
+    padding: 3em 0
+    
+=socialIcons
+  width: 45px
+  height: 45px
+  text-indent: -9999px
+  margin: .5em
+  display: inline-block
+  background-size: cover
+
+.twitter
+  background: url(images/twitter_icon.png)   
+  +socialIcons
+
+.vimeo
+  background: url(images/vimeo_icon.png)
+  +socialIcons
+
+.youtube
+  background: url(images/youtube_icon.png)
+  +socialIcons  
+  
+.facebook
+  background: url(images/facebook_icon.png)
+  +socialIcons  
+  
+.linkedin
+  background: url(images/linkedIn_icon.png)
+  +socialIcons
