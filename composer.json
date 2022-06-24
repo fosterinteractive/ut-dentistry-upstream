@@ -14,7 +14,13 @@
         }
     ],
     "require": {
-        "pantheon-upstreams/upstream-configuration": "*"
+        "pantheon-upstreams/upstream-configuration": "*",
+        "composer/installers": "^1.2",
+        "drupal/core-composer-scaffold": "^8.8",
+        "drupal/core-project-message": "^8.8",
+        "drupal/core-recommended": "^8.8",
+        "drupal/core-vendor-hardening": "^8.8",
+        "cweagans/composer-patches": "^1.7"
     },
     "conflict": {
             "drupal/drupal": "*"
@@ -53,7 +59,7 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "platform": {
-            "php": "7.3"
+            "php": "7.3.23"
         }
     }
-}
+  }
