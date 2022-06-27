@@ -1,0 +1,429 @@
+body.page-node-type-landing-page
+  .field--type-text-long
+    font-family: $serif
+
+//styles in the beginning of this is to undo horizontal-tabs.css    
+.four-buttons, .three-buttons, .two-buttons
+  padding-top: 2.25em
+  .horizontal-tabs
+    border: none
+    margin: 0
+  .horizontal-tab-button
+    background: none
+    border: none
+    position: relative    
+    padding: 0
+  a
+    width: 250px
+    word-spacing: 250px
+    height: 275px
+    margin: 0px 0px 24px 22px
+    background: $blue
+    background-image: url(images/square_button.jpg)
+    opacity: .66
+    background-size: cover
+    background-position: center      
+    font-family: $sans-serif
+    color: white
+    line-height: 1.3
+    font-size: 200%
+    padding: .25em !important
+    text-transform: uppercase
+  strong
+    display: block
+    position: absolute
+    bottom: 0
+  strong::after
+    content: ">"            
+    display: inline-block
+    margin-left: .15em 
+  a:hover, .selected a
+    opacity: 1
+    +transition(all 1s)
+    box-shadow: -5px 8px 10px -4px rgba(black, 0.66)   
+  .horizontal-tab-button.selected    
+    padding: 0    
+    strong::after
+      +transform(rotate(90deg))
+      margin-left: .2em
+  .horizontal-tabs-list
+    margin: 0 auto
+    background: none
+    border: none
+    overflow: hidden
+    display: block      
+  position: relative
+    
+    
+.four-buttons .horizontal-tabs-list
+  max-width: 1112px
+  @media all and (max-width: 1110px)
+    max-width: 566px
+  @media all and (max-width: 560px)
+    max-width: 280px    
+
+.three-buttons .horizontal-tabs-list
+  max-width: 840px
+  @media all and (max-width: 900px)
+    max-width: 540px   
+    a
+      width: 150px
+      height: 175px
+  @media all and (max-width: 566px)  
+    max-width: 194px   
+
+.two-buttons .horizontal-tabs-list
+  max-width: 814px
+  a
+    width: 372px
+    word-spacing: 372px
+    height: 434px
+    background-image: url(images/big_button.jpg)
+    font-size: 350%
+    
+  
+//------ IMAGE BUTTONS ------
+
+.three-image-buttons, .two-image-buttons, .four-image-buttons
+  margin: 0 auto
+  max-width: 820px
+  a
+    display: block
+    float: left
+    background: $blue 
+    margin: 0px 11px 24px
+    opacity: .66
+    width: 250px
+    word-spacing: 250px
+    height: 275px  
+    font-family: $sans-serif
+    color: white
+    background-size: cover
+    background-position: center    
+    line-height: 1.2
+    font-size: 240%    
+    text-transform: uppercase
+    background-image: url(images/square_button.jpg)
+    position: relative
+  strong
+    display: block
+    position: absolute
+    bottom: 0
+    left: .15em
+  strong::after
+    content: none
+  a:hover, &.selected a
+    opacity: 1
+    +transition(all 1s)
+    box-shadow: -5px 8px 20px -4px rgba(black, 0.66)   
+    
+.three-image-buttons  
+  @media all and (max-width: 900px)
+    max-width: 270px
+
+.two-image-buttons  
+  max-width: 770px
+  a
+    background-image: url(images/big_button.jpg)  
+    width: 360px
+    word-spacing: 360px
+    height: 396px    
+    font-size: 420%
+  strong
+    left: 0.15em
+  @media all and (max-width: 830px)
+    max-width: 390px
+    a
+      opacity: 1
+      height: 300px
+  @media all and (max-width: 450px)
+    a
+      width: 75%
+      margin: 0 1em .25em
+      font-size: 300%
+   
+//.four-image-buttons
+  
+  
+//------ SOLID COLOUR BUTTONS ------      
+.six-solid-buttons, .three-solid-buttons, .four-solid-buttons
+  margin: 0 auto
+  max-width: 825px 
+  @media all and (max-width: 880px)
+    max-width: 544px
+  @media all and (max-width: 600px)
+    max-width: 274px
+  a
+    float: left
+    background: $blue
+    margin: 0px 11px 24px
+    width: 250px
+    height: 275px  
+    padding: .25em .3em
+    font-family: $sans-serif
+    color: white  
+    line-height: 1.2
+    font-size: 200%    
+    text-transform: uppercase
+    position: relative
+  strong
+    max-width: 6em
+    display: block
+  a:hover
+    background: $lightBlue  
+  a:hover::before
+    content: ""
+    position: absolute
+    top: 0
+    right: 0
+    border-width: 0 66px 66px 0
+    border-style: solid
+    border-color: #f8f8f8 #f8f8f8 $teal $teal
+    background: $teal
+    width: 0
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2), -2px 2px 1px rgba(0, 0, 0, 0.2) 
+  a::after
+    position: absolute
+    bottom: 0
+    right: .25em
+    
+.three-solid-buttons
+  @media all and (max-width: 880px)
+    max-width: 274px
+    
+.four-solid-buttons    
+  max-width: 832px
+  a
+    width: 198px
+    height: 198px
+    margin: 0px 4px 8px
+    font-size: 195%
+  @media all and (max-width: 866px)
+    max-width: 426px    
+  @media all and (max-width: 450px)
+    max-width: 200px     
+  
+.bp-undergraduate-students  
+  .box:nth-child(1n) a::after
+    content: url(images/calendar.png)
+  .box:nth-child(2n) a::after
+    content: url(images/pencil.png)
+  .box:nth-child(3n) a::after
+    content: url(images/podium.png)
+  .box:nth-child(4n) a::after
+    content: url(images/trophy.png)
+  .box:nth-child(5n) a::after
+    content: url(images/pig.png)
+  .box:nth-child(6n) a::after
+    content: url(images/clipboard.png)   
+
+.bp-ss
+  .box:nth-child(1n) a::after
+    content: url(images/head.png)
+  .box:nth-child(2n) a::after
+    content: url(images/pen.png)
+  .box:nth-child(3n) a::after
+    content: url(images/petition.png)
+ 
+//---because this link has too many words to fit properly in the box
+.bp-current-students    
+  a:nth-child(3n)
+    word-spacing: normal
+
+    
+//------.two-underlined-buttons    
+a[href="#edit-group-degree-programs"], a[href="#edit-group-graduate-specialties"]
+  word-spacing: normal
+  width: auto
+  height: auto
+  background: none
+  color: $blue
+  text-transform: capitalize
+  margin: 0 0 .25em
+  padding: 0 .25em !important
+  opacity: 1
+  &:hover, li.selected &
+    text-decoration: underline !important
+    color: $teal
+    transition: initial
+    box-shadow: none
+    background-color: transparent !important
+  strong
+    position: static
+    &::after
+      content: none  
+a[href="#edit-group-graduate-specialties"]
+  border-left: 3px solid $blue
+ 
+.two-underlined-buttons   
+  .horizontal-tabs-list  
+    width: 31em
+    
+//---undoing the limited width above    
+.three-circle-buttons, .ten-circle-buttons    
+  .horizontal-tabs-list  
+    width: auto
+    
+    
+
+//------CIRCLE BUTTONS------  
+.three-circle-buttons, .four-circle-buttons, .five-circle-buttons, .ten-circle-buttons
+  .horizontal-tab-button a
+    width: 182px
+    height: 182px
+    border-radius: 91px
+    position: relative
+    text-align: center
+    word-spacing: normal
+    font-size: 100%
+    text-transform: none
+    color: white
+    margin: 0px 13px 10px
+    padding: 0 !important
+    background-image: url(images/round_button1_square.jpg) 
+    strong
+      position: absolute
+      top: 50%
+      left: 50%
+      padding: .3em
+      transform: translate(-50%, -50%)
+      display: block
+      border: 1px solid
+      &::after
+        content: none
+      
+.three-circle-buttons .horizontal-tabs-list
+  max-width: 654px
+  @media all and (max-width: 700px)
+    max-width: 230px
+
+.four-circle-buttons .horizontal-tabs-list
+  @media all and (max-width: 960px)
+    max-width: 430px
+  @media all and (max-width: 480px)
+    max-width: 215px    
+
+
+
+    
+//------ VERTICAL TABS ------
+
+.eight-vertical-tabs, .paragraph--type--ssbp-4-vertical-tabs-graduate 
+  max-width: 700px 
+  margin: 0 auto
+  font-family: $sans-serif
+  .horizontal-tabs
+    background: none
+    border: none
+  .horizontal-tabs-list    
+    background: none
+    border: none
+    width: 200px
+    float: left
+    padding-top: .8em
+  .horizontal-tab-button
+    border: 0
+    background: none
+    border-bottom: 1px solid $greyBlue
+    text-transform: uppercase
+    margin: 1.4em .5em 0
+    width: 11em
+    a
+      color: $greyBlue
+      padding: 0 !important
+    a:hover, a:active, a:focus
+      outline: 0 !important
+      text-decoration: none !important
+      border: 0
+      background: none
+      color: $blue
+    &.selected
+      border-color: $blue
+      a
+        color: $blue
+        display: inline-block !important
+      &::after
+        content: url(images/triangle.png)
+        display: inline-block
+        float: right
+        margin-right: -12px
+  .horizontal-tabs-panes        
+    width: 500px
+    float: right
+  .horizontal-tabs-pane    
+    padding: 0 .5em
+  details > .details-wrapper    
+    padding-left: 0
+  .group-label
+    text-transform: uppercase
+    display: block
+    border-bottom: 1px solid
+    font-size: 110%
+  @media all and (max-width: 750px)
+    .horizontal-tabs-list
+      width: 100%
+      float: none
+    .horizontal-tabs-panes      
+      width: 100%
+      float: none
+      margin: 0 .9em
+    .horizontal-tab-button
+      margin: .5em 1.25em
+      &.selected::after
+        +transform(rotate(90deg))
+    
+.bottom-link
+  text-align: center
+  margin: 1em auto
+  a
+    color: $blue
+    display: inline
+    border: 2px solid
+    font-family: $sans-serif
+    padding: .1em 2em
+    font-size: 120%
+    
+  a:hover
+    background: $blue
+    color: white
+  
+ul.bottom-four-links
+  list-style-type: none
+  max-width: none
+  padding: 0
+  li
+    display: block
+    float: left
+    width: 25%
+    border-right: 1px solid white
+    border-bottom: 1px solid white
+    height: 4.5em
+    background: $lightBlue  
+    position: relative
+  li:last-of-type
+    border-right: 0
+  li:hover::before
+    content: ""
+    position: absolute
+    top: 0
+    right: 0
+    border-width: 0 36px 36px 0
+    border-style: solid
+    border-color: #f8f8f8 #f8f8f8 $teal $teal
+    background: $teal
+    width: 0
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2), -2px 2px 1px rgba(0, 0, 0, 0.2)     
+  a
+    font-family: $sans-serif
+    color: white
+    font-size: 150%
+    text-transform: uppercase
+    position: absolute
+    bottom: 0
+    left: 0.5em
+    line-height: 1.1
+  @media all and (max-width: 500px)
+    li
+      width: 50%
+    li:nth-of-type(2)
+      border-right: 0

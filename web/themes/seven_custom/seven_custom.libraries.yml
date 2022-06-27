@@ -1,0 +1,9 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+
+seven_custom-js:
+  verion: 1.x
+  js:
+    js/seven_custom.js: {}

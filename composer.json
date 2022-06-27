@@ -9,8 +9,36 @@
             "url": "https://packages.drupal.org/8"
         },
         {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
             "type": "path",
             "url": "upstream-configuration"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor/link",
+                "version": "4.16.2",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/link/releases/link_4.16.2.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor/fakeobjects",
+                "version": "4.16.2",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.16.2.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],
     "require": {
@@ -20,6 +48,8 @@
         "drupal/core-recommended": "^8.8",
         "pantheon-systems/drupal-integrations": "^8",
         "cweagans/composer-patches": "^1.7",
+        "ckeditor/link": "4.16.2",
+        "ckeditor/fakeobjects": "4.16.2",
         "drupal/anchor_link": "2.5",
         "drupal/boxout": "1.2",
         "drupal/calendar": "1.0-alpha4",

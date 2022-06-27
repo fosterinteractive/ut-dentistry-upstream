@@ -1,0 +1,27 @@
+$blue: #002A5C
+$yellow: #DCB86F
+$green: #7fb080
+$lightBlue: #008bb0
+$teal: #036d8b
+$greyBlue: #C2CAD7
+$grey: #525252
+$red: #E31837
+
++font-face(TradeGothic,fonts/TradeGothicLTCom-BdCn20, normal)
+//+font-face(Bembo,fonts/BemboStd, normal)
+  +font-face(Bembo,fonts/BemboStd-Bold, bold) 
+  +font-face(Bembo,fonts/BemboStd-BoldItalic, bold, italic) 
+  +font-face(Bembo,fonts/BemboStd-Italic, italic)  
+    
+$serif: Times New Roman, Times, serif
+$sans-serif: TradeGothic, $helvetica
+
+=centeredText
+  max-width: 700px
+  margin: 1.25rem auto  
+  line-height: 1.4
+  font-family: $serif
+  text-align: justify
+  @media all and (max-width: 700px)
+    padding-right: 1.25rem
+    padding-left: 1.25rem
