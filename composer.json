@@ -39,6 +39,18 @@
                     "type": "zip"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jackmoore/colorbox",
+                "version": "1.6.4",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/jackmoore/colorbox/archive/1.6.4.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],
     "require": {
@@ -50,6 +62,7 @@
         "cweagans/composer-patches": "^1.7",
         "ckeditor/link": "4.16.2",
         "ckeditor/fakeobjects": "4.16.2",
+        "jackmoore/colorbox": "1.6.4",
         "drupal/anchor_link": "2.5",
         "drupal/boxout": "1.2",
         "drupal/calendar": "1.0-alpha4",
