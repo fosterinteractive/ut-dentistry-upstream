@@ -68,9 +68,9 @@
     "require": {
         "pantheon-upstreams/upstream-configuration": "dev-main",
         "composer/installers": "^1.9",
-        "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-recommended": "^8.8",
-        "pantheon-systems/drupal-integrations": "^8",
+        "drupal/core-composer-scaffold": "^9.2",
+        "drupal/core-recommended": "^9.2",
+        "pantheon-systems/drupal-integrations": "^9",
         "cweagans/composer-patches": "^1.7",
         "ckeditor/link": "4.16.2",
         "ckeditor/fakeobjects": "4.16.2",
@@ -89,17 +89,17 @@
         "drupal/ctools": "3.7",
         "drupal/devel": "4.1.5",
         "drupal/ds": "3.13",
-        "drupal/editor_advanced_link": "1.9",
+        "drupal/editor_advanced_link": "2.0.0",
         "drupal/entity_reference_revisions": "1.9",
         "drupal/fakeobjects": "1.1",
-        "drupal/field_collection": "1.0-alpha1",
+        "drupal/field_collection": "4.0.x-dev",
         "drupal/field_group": "3.2",
-        "drupal/geolocation": "1.12",
-        "drupal/google_analytics": "2.5",
+        "drupal/geolocation": "3.10",
+        "drupal/google_analytics": "4.0.0",
         "drupal/iframe": "2.16",
         "drupal/masquerade": "2.0-beta4",
         "drupal/node_view_permissions": "1.5",
-        "drupal/paragraphs": "1.13",
+        "drupal/paragraphs": "1.14",
         "drupal/pathauto": "1.10",
         "drupal/protected_pages": "1.2",
         "drupal/publishcontent": "1.5",
@@ -119,10 +119,10 @@
         "drupal/views_templates": "1.1",
         "drupal/webform": "6.2.0-beta2",
         "drupal/upgrade_status": "3.14",
-        "drush/drush": "^10.3"
+        "drush/drush": "^10.3 || ^11"
     },
     "require-dev": {
-        "drupal/core-dev": "^8.8"
+        "drupal/core-dev": "^9.2"
     },
     "conflict": {
             "drupal/drupal": "*"
