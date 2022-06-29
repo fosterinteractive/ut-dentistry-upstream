@@ -51,6 +51,18 @@
                     "type": "zip"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "cure53/dompurify",
+                "version": "2.3.8",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/cure53/dompurify/archive/main.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],
     "require": {
@@ -63,6 +75,7 @@
         "ckeditor/link": "4.16.2",
         "ckeditor/fakeobjects": "4.16.2",
         "jackmoore/colorbox": "1.6.4",
+        "cure53/dompurify": "2.3.8",
         "drupal/anchor_link": "2.5",
         "drupal/boxout": "1.2",
         "drupal/calendar": "1.0-alpha4",
