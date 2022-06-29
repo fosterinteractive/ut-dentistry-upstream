@@ -76,6 +76,7 @@
         "ckeditor/fakeobjects": "4.16.2",
         "jackmoore/colorbox": "1.6.4",
         "cure53/dompurify": "2.3.8",
+        "drupal/admin_toolbar": "3.1.0",
         "drupal/anchor_link": "2.5",
         "drupal/boxout": "1.2",
         "drupal/calendar": "1.0-alpha4",
