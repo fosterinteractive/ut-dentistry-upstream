@@ -1,10 +1,14 @@
 <?php
 
 /**
+ * @file
+ * Drupal site-specific local configuration file.
+ */
+
+/**
  * Enable local development services.
  */
 $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
-
 
 /**
  * Show all error messages, with backtrace information.
@@ -37,6 +41,16 @@ $settings['cache']['bins']['render'] = 'cache.backend.null';
 $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
 
 /**
+ * Disable the page cache.
+ *
+ * This setting disables the render cache by using the Null cache back-end
+ * defined by the development.services.yml file above.
+ *
+ * Added in Drupal 8.4.x
+ */
+$settings['cache']['bins']['page'] = 'cache.backend.null';
+
+/**
  * Allow test modules and themes to be installed.
  *
  * Drupal ignores test modules and themes by default for performance reasons.
@@ -45,13 +59,24 @@ $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
  */
 $settings['extension_discovery_scan_tests'] = TRUE;
 
-$config['system.file']['path']['temporary'] = '/tmp';
+/**
+ * Enable access to rebuild.php.
+ *
+ * This setting can be enabled to allow Drupal's php and database cached
+ * storage to be cleared via the rebuild.php page. Access to this page can also
+ * be gained by generating a query string from rebuild_token_calculator.sh and
+ * using these parameters in a request to rebuild.php.
+ */
+$settings['rebuild_access'] = TRUE;
 
-// Path to local imagemagick
-// $config['imagemagick.settings']['path_to_binaries'] = '/usr/local/Cellar/imagemagick/6.9.1-1/bin/';
+// Temp file path.
+$settings['file_temp_path'] = '/tmp';
 
-// Database
-$databases['default']['default'] = array (
+// Private file path.
+$settings['file_private_path'] = 'sites/default/files/private';
+
+// Database.
+$databases['default']['default'] = [
   'database' => '',
   'username' => '',
   'password' => '',
@@ -60,13 +85,19 @@ $databases['default']['default'] = array (
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
-);
-// Services yaml file
+];
+
+// Services yaml file.
 $settings['container_yamls'][] = __DIR__ . '/services.local.yml';
 
-// Insert a Random Generated Hash Salt key
+// Insert a random generated hash salt key.
 $settings['hash_salt'] = '';
 
-// Enable dev config split.
-$config['config_split.config_split.development']['status'] = TRUE;
+// Enable local config split.
+$config['config_split.config_split.local']['status'] = TRUE;
+
+// Image magic binary location.
+// If installed by home brew this will be '/usr/local/bin/'
+// MAMP will be '/Applications/MAMP/Library/bin/'.
+$config['imagemagick.settings']['path_to_binaries'] = '/usr/local/bin/';
 

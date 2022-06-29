@@ -1,0 +1,7 @@
+backstop_data/reference_*
+backstop_data/test_*
+backstop_data/html_report_*
+backstop_data/ci_report_*
+node_modules
+backstop.json
+package-lock.json

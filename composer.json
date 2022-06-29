@@ -1,6 +1,6 @@
 {
-    "name": "pantheon-upstreams/drupal-project",
-    "description": "Install Drupal (drops-8) with Composer on Pantheon.",
+    "name": "pantheon-upstreams/drupal-composer-managed",
+    "description": "Install Drupal 9 with Composer on Pantheon.",
     "type": "project",
     "license": "MIT",
     "repositories": [
@@ -9,18 +9,107 @@
             "url": "https://packages.drupal.org/8"
         },
         {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
             "type": "path",
             "url": "upstream-configuration"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor/link",
+                "version": "4.16.2",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/link/releases/link_4.16.2.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor/fakeobjects",
+                "version": "4.16.2",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.16.2.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jackmoore/colorbox",
+                "version": "1.6.4",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/jackmoore/colorbox/archive/1.6.4.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],
     "require": {
-        "pantheon-upstreams/upstream-configuration": "*",
-        "composer/installers": "^1.2",
+        "pantheon-upstreams/upstream-configuration": "dev-main",
+        "composer/installers": "^1.9",
         "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
-        "drupal/core-vendor-hardening": "^8.8",
-        "cweagans/composer-patches": "^1.7"
+        "pantheon-systems/drupal-integrations": "^8",
+        "cweagans/composer-patches": "^1.7",
+        "ckeditor/link": "4.16.2",
+        "ckeditor/fakeobjects": "4.16.2",
+        "jackmoore/colorbox": "1.6.4",
+        "drupal/anchor_link": "2.5",
+        "drupal/boxout": "1.2",
+        "drupal/calendar": "1.0-alpha4",
+        "drupal/calendar_datetime": "1.0-alpha4",
+        "drupal/captcha": "1.2",
+        "drupal/ckeditor_accordion": "1.3",
+        "drupal/ckeditor_bootstrap_grid": "1.4",
+        "drupal/colorbox": "1.7",
+        "drupal/contact_block": "1.5",
+        "drupal/css_editor": "1.2",
+        "drupal/ctools": "3.7",
+        "drupal/devel": "2.1",
+        "drupal/ds": "3.13",
+        "drupal/editor_advanced_link": "1.9",
+        "drupal/entity_reference_revisions": "1.8",
+        "drupal/fakeobjects": "1.1",
+        "drupal/field_collection": "1.0-alpha1",
+        "drupal/field_group": "3.2",
+        "drupal/geolocation": "1.12",
+        "drupal/google_analytics": "2.5",
+        "drupal/iframe": "1.24",
+        "drupal/masquerade": "2.0-beta4",
+        "drupal/node_view_permissions": "1.5",
+        "drupal/paragraphs": "1.12",
+        "drupal/pathauto": "1.8",
+        "drupal/protected_pages": "1.2",
+        "drupal/publishcontent": "1.4",
+        "drupal/quick_node_clone": "1.14",
+        "drupal/radix_layouts": "4.1",
+        "drupal/recaptcha": "2.5",
+        "drupal/redirect": "1.6",
+        "drupal/redirect_404": "1.6",
+        "drupal/smtp": "1.0-rc3",
+        "drupal/token": "1.9",
+        "drupal/video_embed_field": "2.4",
+        "drupal/video_embed_wysiwyg": "2.4",
+        "drupal/view_unpublished": "1.0",
+        "drupal/views_accordion": "1.3",
+        "drupal/views_field_formatter": "1.13",
+        "drupal/views_slideshow": "4.8",
+        "drupal/views_templates": "1.1",
+        "drupal/webform": "5.28",
+        "drupal/upgrade_status": "3.14",
+        "drush/drush": "^10.3"
+    },
+    "require-dev": {
+        "drupal/core-dev": "^8.8"
     },
     "conflict": {
             "drupal/drupal": "*"
@@ -28,6 +117,19 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "./web"
+            },
+            "allowed-packages": [
+                "pantheon-systems/drupal-integrations"
+            ],
+            "file-mapping": {
+                "[project-root]/.editorconfig": false,
+                "[project-root]/pantheon.upstream.yml": false,
+                "[project-root]/.gitattributes": false
+            }
+        },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],
@@ -35,28 +137,43 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
             "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
         },
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
             "drupal/core": "-p2"
-        },
-        "drupal-scaffold": {
-            "allowed-packages": [
-                "pantheon-systems/drupal-integrations"
-            ],
-            "locations": {
-                "web-root": "./web"
-            },
-            "file-mapping": {
-                "[project-root]/.editorconfig": false,
-                "[project-root]/pantheon.upstream.yml": false
-            }
         }
     },
+    "autoload": {
+        "classmap": [
+            "upstream-configuration/scripts/ComposerScripts.php"
+        ]
+    },
+    "scripts": {
+        "pre-update-cmd": [
+            "DrupalComposerManaged\\ComposerScripts::preUpdate"
+        ],
+        "upstream-require": [
+            "DrupalComposerManaged\\ComposerScripts::upstreamRequire"
+        ]
+    },
+    "scripts-descriptions": {
+        "upstream-require": "Add a dependency to an upstream. See https://pantheon.io/docs/create-custom-upstream for information on creating custom upstreams."
+    },
     "config": {
-        "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": false,
+        "platform": {
+            "php": "7.4"
+        },
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
-  }
+}
