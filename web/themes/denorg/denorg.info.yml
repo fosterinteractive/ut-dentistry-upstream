@@ -2,6 +2,8 @@ name: Default Reset
 type: theme
 description: This is a fluffy sub theme of Stable reset back to the beginning (2021-07-06)
 core: 8.x
+core_version_requirement: ^8 || ^9
+
 # Defines the base theme
 base theme: classy
 # Defines libraries group in which we can add css/js.
