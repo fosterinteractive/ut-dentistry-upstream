@@ -1170,7 +1170,7 @@ img.align-left {
     margin: 0;
     float: none; } }
 
-.col-md-4 img.align-right, .col-md-4 img.align-left, .col-md-3 img.align-right, .col-md-3 img.align-left, .col-md-2 img.align-right, .col-md-2 img.align-left {
+.col-lg-4 img.align-right, .col-lg-4 img.align-left, .col-lg-3 img.align-right, .col-lg-3 img.align-left, .col-lg-2 img.align-right, .col-lg-2 img.align-left {
   margin: 0.25em; }
 
 figure {
@@ -4200,11 +4200,11 @@ body.path-search label, body.path-search #edit-advanced summary {
 .paragraph--type-emergency-contact-us .mccoppin {
   max-width: 700px;
   margin: 0 auto; }
-  [data-history-node-id="56"] .mccoppin .col-md-4,
-  [data-history-node-id="48"] .mccoppin .col-md-4,
-  [data-history-node-id="74"] .mccoppin .col-md-4,
-  [data-history-node-id="58"] .mccoppin .col-md-4,
-  .paragraph--type-emergency-contact-us .mccoppin .col-md-4 {
+  [data-history-node-id="56"] .mccoppin .col-lg-4,
+  [data-history-node-id="48"] .mccoppin .col-lg-4,
+  [data-history-node-id="74"] .mccoppin .col-lg-4,
+  [data-history-node-id="58"] .mccoppin .col-lg-4,
+  .paragraph--type-emergency-contact-us .mccoppin .col-lg-4 {
     padding: 1%; }
 [data-history-node-id="56"] .radix-layouts-column1 p,
 [data-history-node-id="48"] .radix-layouts-column1 p,
@@ -4826,14 +4826,14 @@ body.path-search label, body.path-search #edit-advanced summary {
   font-family: Oswald, "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
 .page-node-type-landing-page [data-history-node-id="2"] .container-fluid {
   max-width: 1442px; }
-.page-node-type-landing-page [data-history-node-id="2"] .col-md-4 {
+.page-node-type-landing-page [data-history-node-id="2"] .col-lg-4 {
   font-family: Oswald, "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 110%; }
-  .page-node-type-landing-page [data-history-node-id="2"] .col-md-4 a {
+  .page-node-type-landing-page [data-history-node-id="2"] .col-lg-4 a {
     color: #002A5C;
     margin: 1em 0;
     display: block; }
-  .page-node-type-landing-page [data-history-node-id="2"] .col-md-4 .field--name-field-links-col1 .field__label {
+  .page-node-type-landing-page [data-history-node-id="2"] .col-lg-4 .field--name-field-links-col1 .field__label {
     background-image: url(images/IITS_Landing_InstructionalClinical.jpg);
     height: 150px;
     background-size: cover;
@@ -4846,7 +4846,7 @@ body.path-search label, body.path-search #edit-advanced summary {
     font-weight: normal;
     text-transform: uppercase;
     height: 150px; }
-  .page-node-type-landing-page [data-history-node-id="2"] .col-md-4 .field--name-field-links-col2 .field__label {
+  .page-node-type-landing-page [data-history-node-id="2"] .col-lg-4 .field--name-field-links-col2 .field__label {
     height: 150px;
     background-size: cover;
     background-position: center;
@@ -4859,7 +4859,7 @@ body.path-search label, body.path-search #edit-advanced summary {
     text-transform: uppercase;
     height: 150px;
     background-image: url(images/IITS_Landing_InformationTech.jpg); }
-  .page-node-type-landing-page [data-history-node-id="2"] .col-md-4 .field--name-field-links-col3 .field__label {
+  .page-node-type-landing-page [data-history-node-id="2"] .col-lg-4 .field--name-field-links-col3 .field__label {
     height: 150px;
     background-size: cover;
     letter-spacing: 0.5px;
@@ -4873,7 +4873,7 @@ body.path-search label, body.path-search #edit-advanced summary {
     height: 150px;
     background-image: url(images/IITS_Landing_DigitalMedia02.jpg); }
   @media all and (min-width: 995px) {
-    .page-node-type-landing-page [data-history-node-id="2"] .col-md-4.radix-layouts-column2 {
+    .page-node-type-landing-page [data-history-node-id="2"] .col-lg-4.radix-layouts-column2 {
       padding: 0; } }
 .page-node-type-landing-page [data-history-node-id="2"] [href="/faq/8"]::before {
   display: inline-block;
@@ -5576,7 +5576,7 @@ body.page-node-type-courses .field--name-field-course-title {
     body.page-node-type-courses .field--name-field-course-title {
       padding-right: 1rem;
       padding-left: 1rem; } }
-body.page-node-type-courses .col-md-12 {
+body.page-node-type-courses .col-lg-12 {
   padding: 0; }
 body.page-node-type-courses .radix-layouts-sidebar {
   background: #7A92A8;
